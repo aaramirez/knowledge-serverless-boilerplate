@@ -27,3 +27,6 @@ __docs
 
 # webpack
 .webpack
+
+# code coverage report
+.nyc_output
