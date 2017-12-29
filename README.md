@@ -4,7 +4,9 @@
 [![Collaborative Etiquette](https://img.shields.io/badge/%E2%9C%93-collaborative_etiquette-brightgreen.svg)](https://git.io/col)
 
 
-At Knowledge we leverage AWS Serverless technology to build highly scalable software in a micro-service fashion with less operational work, this allow us to focus on building great services and worry about maintaining, scaling and provisioning servers. This is our boilerplate for AWS Lambda Node.js Services using Serverless Framework.
+At Knowledge we leverage AWS Serverless technology to build highly scalable software in a micro-service fashion with less operational work, this allow us to focus on building great services and not worry about maintaining, scaling and provisioning servers; and we don't pay for idle capacity, which is great!.
+
+We focus on security, reliability, performance efficiency, cost optimization and operational excellence. This is our boilerplate for AWS Lambda Node.js Services using Serverless Framework. The infrastructure (VPCs) are managed separately with CloudFormation and backend developers have full ownership of the services, automated testing and deployment is done with Jenkins. We use mainly Node.js.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -21,11 +23,24 @@ At Knowledge we leverage AWS Serverless technology to build highly scalable soft
 
 ## Features
 
-No features yet
+ - StandardJS linter.
+ - Testing with Mocha and Chai.
+ - JavaScript 2017 support with Babel ( async / await ).
+ - Serverless framework
 
 ## Getting Started
 
-Add your getting started instructions here.
+For you to able to understand and execute the code in this repository advanced knowledge of JavaScript, Node.js and Cloud Computing is required. If you are not familiar with these technologies we suggest you to visit [acloud.guru](https://acloud.guru/) and [learnnode.com](https://learnnode.com/).
+
+If you are new to Serverless Architectures in AWS we suggest you to read the the official 2017 AWS whitepaper on [Serverless Architectures
+with AWS Lambda - Overview and Best Practices](https://d1.awsstatic.com/whitepapers/serverless-architectures-with-aws-lambda.pdf) and [The AWS Well-Architected Framework](http://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf) will help you understand the pros and cons
+of decisions you make while building systems on AWS.
+
+### Environment Dependencies
+
+You need some global environment configurations
+
+- install [Node.js](https://github.com/nodejs/node) v8.9.3. We recommend using [nvm and avn to manage the node versions](https://gaboesquivel.com/blog/2015/automatic-node.js-version-switching/).
 
 ## Contributing
 

@@ -24,3 +24,6 @@ build
 
 # Documents for development
 __docs
+
+# webpack
+.webpack

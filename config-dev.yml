@@ -1,0 +1,3 @@
+environment:
+  STAGE: ${opt:stage, self:provider.stage}
+  REGION: ${opt:region, self:provider.region}

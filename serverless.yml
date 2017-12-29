@@ -1,0 +1,49 @@
+service: knowledge-serverless-boilerplate
+
+package:
+  individually: true
+  exclude:
+    - test/**
+    - .git/**
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-mocha-plugin
+  - serverless-kms-secrets
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  webpackIncludeModules:
+    forceExclude:
+      - aws-sdk
+    forceInclude:
+    #  - mysql2
+    #  - request
+#  kmsSecrets: ${file(kms-secrets.${opt:stage, self:provider.stage}.${opt:region, self:provider.region}.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  cfLogs: true
+  stage: dev
+  region: us-east-1
+  versionFunctions: false  # ping ruben ?
+  timeout: 300
+  environment: ${file(config-${self:custom.stage}.yml):environment}
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+       - "*"
+      Resource: "*"
+
+functions:
+  hello:
+    optimize: true  # what does it do ?
+    handler: src/functions/handler.hello
+    events:
+      - http:
+          path: hello
+          method: GET
+          cors: true
