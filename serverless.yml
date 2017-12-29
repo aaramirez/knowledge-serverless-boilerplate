@@ -28,7 +28,7 @@ provider:
   cfLogs: true
   stage: dev
   region: us-east-1
-  versionFunctions: false  # ping ruben ?
+  versionFunctions: false
   timeout: 300
   environment: ${file(config-${self:custom.stage}.yml):environment}
 
@@ -40,7 +40,7 @@ provider:
 
 functions:
   hello:
-    optimize: true  # what does it do ?
+    optimize: true
     handler: src/functions/handler.hello
     events:
       - http:
