@@ -30,3 +30,6 @@ __docs
 
 # code coverage report
 .nyc_output
+
+# serverless
+.serverless/
